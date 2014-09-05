@@ -423,7 +423,7 @@ public class InteractionGraph {
 	}
 
 	public static void main(String[] args){
-		InteractionGraph ig = new InteractionGraph(2,3,2);
+		/*InteractionGraph ig = new InteractionGraph(2,3,2);
 		System.out.println(ig);
 		int[] row = {0, 2, 2};
 		System.out.println(ig.getPropRandInteraction(newRow(row)));
@@ -449,7 +449,7 @@ public class InteractionGraph {
 		System.out.println(ig.getPropRandInteraction(newRow(row)));
 		
 		System.out.println(ig.isEmpty());
-		
+		*/
 		
 		
 		//List<SymTuple> test = ig.createAllSymTuples(3, 2);
@@ -457,6 +457,10 @@ public class InteractionGraph {
 		
 		//List<ColGroup> test1 = ig.createAllColGroups(2, 4);
 		//System.out.println(test1);
+		
+		InteractionGraph ig = new InteractionGraph(4,13,18);
+		System.out.println(ig);
+		
 	}
 
 	private static Integer[] newRow(int[] row) {
