@@ -1,3 +1,5 @@
+package edu.asu.ca.kaushik.algorithms.structures;
+
 
 public class Interaction {
 	ColGroup cols;

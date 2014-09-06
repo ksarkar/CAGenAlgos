@@ -1,9 +1,14 @@
+package edu.asu.ca.kaushik.outputformatter;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
+
+import edu.asu.ca.kaushik.Runner;
+import edu.asu.ca.kaushik.algorithms.structures.CA;
 
 
 public class ComputeCoverageOutputFormatter implements OutputFormatter {

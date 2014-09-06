@@ -1,3 +1,6 @@
+package edu.asu.ca.kaushik.algorithms.derandomized.multicandidate;
+import edu.asu.ca.kaushik.algorithms.derandomized.Hybrid;
+
 
 public class HybridMultiCandidate extends Hybrid {
 

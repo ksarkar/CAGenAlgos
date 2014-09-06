@@ -1,3 +1,5 @@
+package edu.asu.ca.kaushik.algorithms.structures;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;

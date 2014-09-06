@@ -1,3 +1,6 @@
+package edu.asu.ca.kaushik.algorithms;
+import edu.asu.ca.kaushik.algorithms.structures.CA;
+
 
 public interface CAGenAlgo {
 	

@@ -1,4 +1,8 @@
+package edu.asu.ca.kaushik.algorithms.randomized;
 import java.util.Random;
+
+import edu.asu.ca.kaushik.algorithms.structures.Interaction;
+import edu.asu.ca.kaushik.algorithms.structures.InteractionGraph;
 
 
 public class PropRand extends RandCAGenAlgo {

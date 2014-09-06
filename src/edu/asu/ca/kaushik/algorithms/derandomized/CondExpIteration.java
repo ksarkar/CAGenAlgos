@@ -1,3 +1,7 @@
+package edu.asu.ca.kaushik.algorithms.derandomized;
+import edu.asu.ca.kaushik.algorithms.structures.Interaction;
+import edu.asu.ca.kaushik.algorithms.structures.InteractionGraph;
+
 
 public class CondExpIteration extends CondExpEntries {
 	

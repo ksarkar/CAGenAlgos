@@ -1,5 +1,9 @@
+package edu.asu.ca.kaushik.algorithms.derandomized.multicandidate;
 import java.util.Arrays;
 import java.util.List;
+
+import edu.asu.ca.kaushik.algorithms.derandomized.CondExpEntries;
+import edu.asu.ca.kaushik.algorithms.structures.InteractionGraph;
 
 
 public class DensityMultCandidateRow extends CondExpEntries {
@@ -12,8 +16,8 @@ public class DensityMultCandidateRow extends CondExpEntries {
 		this.numCandidates = 3;
 	}
 	
-	@Override 
-	protected Integer[] selectRandRow(InteractionGraph ig, int k, int v) {
+	@Override
+	public Integer[] selectRandRow(InteractionGraph ig, int k, int v) {
 		Integer[] bestRow = null;
 		int bestCoverage = 0;
 		

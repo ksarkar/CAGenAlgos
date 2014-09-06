@@ -1,7 +1,15 @@
+package edu.asu.ca.kaushik.algorithms.derandomized;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
+
+import edu.asu.ca.kaushik.algorithms.CAGenAlgo;
+import edu.asu.ca.kaushik.algorithms.structures.CA;
+import edu.asu.ca.kaushik.algorithms.structures.ColGroup;
+import edu.asu.ca.kaushik.algorithms.structures.Interaction;
+import edu.asu.ca.kaushik.algorithms.structures.InteractionGraph;
+import edu.asu.ca.kaushik.algorithms.structures.SymTuple;
 
 
 public class CondExpEntries implements CAGenAlgo {
@@ -55,7 +63,7 @@ public class CondExpEntries implements CAGenAlgo {
 		return ca;
 	}
 
-	protected Integer[] selectRandRow(InteractionGraph ig, int k, int v) {
+	public Integer[] selectRandRow(InteractionGraph ig, int k, int v) {
 		return this.fillRow(this.makeStarredRow(k, v), ig, v);
 	}
 

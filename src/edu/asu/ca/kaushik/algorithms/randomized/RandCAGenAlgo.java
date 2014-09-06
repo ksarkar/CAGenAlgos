@@ -1,3 +1,8 @@
+package edu.asu.ca.kaushik.algorithms.randomized;
+import edu.asu.ca.kaushik.algorithms.CAGenAlgo;
+import edu.asu.ca.kaushik.algorithms.structures.CA;
+import edu.asu.ca.kaushik.algorithms.structures.InteractionGraph;
+
 
 public abstract class RandCAGenAlgo implements CAGenAlgo {
 	protected int numSamples = 10;
