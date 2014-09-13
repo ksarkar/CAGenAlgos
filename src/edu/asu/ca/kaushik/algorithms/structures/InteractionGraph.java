@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.Set;
+import edu.asu.ca.kaushik.algorithms.structures.Helper;
 
 
 public class InteractionGraph {
@@ -60,8 +61,8 @@ public class InteractionGraph {
 	
 
 	private Map<ColGroup, Set<SymTuple>> createFullGraph(int t, int k, int v) {
-		this.allColGroups = createAllColGroups(t, k);
-		List<SymTuple> symTuples = createAllSymTuples(t, v);
+		this.allColGroups = Helper.createAllColGroups(t, k);
+		List<SymTuple> symTuples = Helper.createAllSymTuples(t, v);
 		
 		this.numInt = this.allColGroups.size() * symTuples.size();
 		
@@ -72,54 +73,6 @@ public class InteractionGraph {
 		}
 		
 		return graph;
-	}
-
-	public List<SymTuple> createAllSymTuples(int t, int v) {
-		if (t == 0){
-			List<SymTuple> list = new ArrayList<SymTuple>();
-			list.add(new SymTuple(new int[0]));
-			return list;
-		}
-		else {
-			List<SymTuple> small = createAllSymTuples(t-1, v);
-			
-			List<SymTuple> big = new ArrayList<SymTuple>();
-			for (SymTuple tuple : small) {
-				for (int i = 0; i < v; i++) {
-					big.add(new SymTuple(tuple, i));
-				}
-			}
-			return big;
-		}
-	}
-
-	private List<ColGroup> createAllColGroups(int t, int k) {
-		if (t == 0){
-			List<ColGroup> list = new ArrayList<ColGroup>();
-			list.add(new ColGroup(new int[0]));
-			return list;
-		}
-		else {
-			List<ColGroup> small = createAllColGroups(t-1, k);
-			
-			List<ColGroup> big = new ArrayList<ColGroup>();
-			for (ColGroup tuple : small) {
-				for (int i = 0; i < k; i++) {
-					if (shouldInclude(tuple.getCols(), i)) {
-						big.add(new ColGroup(tuple, i));
-					}
-				}
-			}
-			return big;
-		}
-	}
-	
-	private static boolean shouldInclude(int[] a, int i){
-		for (int j : a) {
-			if (i <= j)
-				return false;
-		}
-		return true;
 	}
 
 	public boolean isEmpty() {

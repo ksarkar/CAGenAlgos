@@ -128,6 +128,28 @@ public final class ColGroup {
 		}
 		return false;
 	}
+
+	public ColGroup addCol(int index) {
+		int[] newCols = new int[this.len + 1];
+		boolean greater = false;
+		for (int i = 0; i < this.len; i++) {
+			if (!greater) {
+				if (this.cols[i] < index) {
+					newCols[i] = this.cols[i];
+				} else {
+					greater = true;
+					newCols[i] = index;
+					newCols[i + 1] = this.cols[i];
+				}
+			} else {
+				newCols[i + 1] = this.cols[i];
+			}
+		}
+		if (!greater) {
+			newCols[this.len] = index;
+		}
+		return new ColGroup(newCols);
+	}
 	
 	
 

@@ -93,14 +93,14 @@ public class ExplicitCAOutputFormatter implements OutputFormatter {
 		int t = 6;
 		int v = 3;
 		
-		int k1 = 15;
+		int k1 = 19;
 		int k2 = 19;
 		
 		List<String> algoList = new ArrayList<String>();
 		
-		algoList.add("DensityMultCandidateRow");
+		//algoList.add("DensityMultCandidateRow");
 		algoList.add("HybridMultiCandidate");
-		algoList.add("BestOfKDensityMultiCandidateHybrid");
+		//algoList.add("BestOfKDensityMultiCandidateHybrid");
 		//algoList.add("CondExpIteration");
 		
 		OutputFormatter formatter = new ExplicitCAOutputFormatter();

@@ -7,6 +7,7 @@ import java.util.Random;
 import edu.asu.ca.kaushik.algorithms.CAGenAlgo;
 import edu.asu.ca.kaushik.algorithms.structures.CA;
 import edu.asu.ca.kaushik.algorithms.structures.ColGroup;
+import edu.asu.ca.kaushik.algorithms.structures.Helper;
 import edu.asu.ca.kaushik.algorithms.structures.Interaction;
 import edu.asu.ca.kaushik.algorithms.structures.InteractionGraph;
 import edu.asu.ca.kaushik.algorithms.structures.SymTuple;
@@ -123,7 +124,7 @@ public class CondExpEntries implements CAGenAlgo {
 			}
 		}
 		
-		List<SymTuple> allBlankEntries = ig.createAllSymTuples(starredCols.size(), v);
+		List<SymTuple> allBlankEntries = Helper.createAllSymTuples(starredCols.size(), v);
 		
 		double expCoverage = 0;
 		for (SymTuple tuple : allBlankEntries) {
